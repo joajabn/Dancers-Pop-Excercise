@@ -31,11 +31,9 @@ public class DancerService {
 
       log.info("Saving new dancer... ");
 
-      return dancersRepository.save(newDancer)
-          .getDancerId();
+      return dancersRepository.save(newDancer).getDancerId();
     }
-    return potentialDancer.get()
-        .getDancerId();
+    return potentialDancer.get().getDancerId();
   }
 
   public List<Dancer> returnAllDancers() {

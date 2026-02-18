@@ -10,8 +10,8 @@ import pl.paniodprogramowania.findBugsProject.model.Dancer;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-08-21T12:18:06+0200",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 23.0.2 (Homebrew)"
+    date = "2026-02-18T12:37:36+0100",
+    comments = "version: 1.6.3, compiler: javac, environment: Java 21.0.8 (Eclipse Adoptium)"
 )
 @Component
 public class DancerMapperImpl implements DancerMapper {
