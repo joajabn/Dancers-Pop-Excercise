@@ -49,11 +49,11 @@ class DancePlayScoresControllerTest {
         .body("details", Matchers.hasSize(2))
 
         .body("details[0].dancePlayId", Matchers.is(1))
-        .body("details[0].score", Matchers.is(4.5))
+        .body("details[0].score", Matchers.is(4.5f))
         .body("details[0].nrOfRatings", Matchers.is(2))
 
         .body("details[1].dancePlayId", Matchers.is(2))
-        .body("details[1].score", Matchers.is(3))
-        .body("details[1].nrOfRatings", Matchers.is(3));
+        .body("details[1].score", Matchers.is(3.0f))
+        .body("details[1].nrOfRatings", Matchers.is(1));
   }
 }

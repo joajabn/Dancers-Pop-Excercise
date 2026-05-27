@@ -10,8 +10,10 @@ public record Dancer(
         long id,
         String firstName,
         String lastName,
+        String fullName,
+        int age,
         PreferredDance preferredDance,
         DancerDetails dancerDetails,
-        List<DancePlay> dancerPlays
+        List<DancePlay> dancePlays
 ) {
 }
