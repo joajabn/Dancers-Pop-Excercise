@@ -1,16 +1,7 @@
 package pl.paniodprogramowania.findBugsProject.entities;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -41,6 +32,10 @@ public class DancerEntity {
     @Column
     @Enumerated(EnumType.STRING)
     private PreferredDance preferredDance;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name ="dancer_details_id", referencedColumnName = "dancer_details_id")
+    private DancerDetailsEntity dancerDetails;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "primaballerina")
     private List<DancePlayEntity> dancePlays;

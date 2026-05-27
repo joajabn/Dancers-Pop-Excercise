@@ -1,6 +1,5 @@
 package pl.paniodprogramowania.findBugsProject.model;
 
-import java.util.List;
 import lombok.Builder;
 
 @Builder
