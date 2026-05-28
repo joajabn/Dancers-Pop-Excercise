@@ -8,5 +8,6 @@ import java.util.List;
 
 @Repository
 public interface DancerRatingRepository extends JpaRepository<DancerRatingEntity, Long> {
-    List<DancerRatingEntity> findAllByDancer_DancerId(Long dancerId);
+
+    List<DancerRatingEntity> findAllByDancerDancerId(long dancerId);
 }

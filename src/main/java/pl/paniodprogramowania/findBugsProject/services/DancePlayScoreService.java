@@ -16,7 +16,6 @@ import pl.paniodprogramowania.findBugsProject.repositories.DancerRatingRepositor
 
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -42,7 +41,7 @@ public class DancePlayScoreService {
 
 
         List<DancePlayScoreDetails> details = dancerRatingRepository
-                .findAllByDancer_DancerId(dancerId)
+                .findAllByDancerDancerId(dancerId)
                 .stream()
                 .collect(Collectors.groupingBy(rating -> rating.getDancePlay().getDancePlayId()))
                 .entrySet().stream()
